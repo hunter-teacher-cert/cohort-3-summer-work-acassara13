@@ -63,8 +63,8 @@ public class ArrayPractice
   {
     int[] data = new int[size];
     data[0] = startValue;
-    for(int i = 0; i < size; i++){
-        data[i] = data[i + 1] + step; 
+    for(int i = 1; i < size; i++){
+        data[i] = data[i-1] + step;
     }
     // loop through each element of the array and
     /* YOUR BRILLIANT CODE HERE */
@@ -181,7 +181,11 @@ public class ArrayPractice
   */
   public static boolean isSorted( int[] data )
   {
-    /* YOUR BRILLIANT CODE HERE */
+    //loop
+    for (int i=0; i< data.length; i++){
+      if (data[i] > data[i+1])
+        return false;
+    }
 
     return true; // replace this
 
@@ -219,6 +223,12 @@ public class ArrayPractice
   public static int countOdds( int[] data ) {
     int count = 0;
 
+    for(int i=0; i< data.length; i++){
+      if(data[i] % 2 == 1){
+        count++;
+      } 
+    }
+    
     /* YOUR BRILLIANT CODE HERE */
 
     // Note the % operator is the modulo (basically remainder) function
@@ -261,9 +271,9 @@ public class ArrayPractice
     System.out.println("The sum of the integers in the array is " + arraySum(data) + ".");
     System.out.println("The first occurrence of 3 in the array is in the index of " + firstOccurence(data, 3) + ".");
     System.out.println("The largest number in the array is " + findMaxValue(data) + ".");
-    System.out.println(buildIncreasingArray(5,3,2));
+    printArray(buildIncreasingArray(5,3,2));
     // printArray(data2);
-
+System.out.print(isSorted(data));
     // add calls to show that the methods you write work.
   }
 }; 
