@@ -2,9 +2,9 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Array2DPractice by Team LucidThinkeren
- * First Last
- * collaborators: First Last, First Last
+ * Array2DPractice by Team BK1
+ * Aasine Cassara
+ * collaborators: Sam, Alana, Amanda
  */
 
 /**
@@ -244,10 +244,16 @@ public class Array2DPractice
      xxxRxx
      Note that the method has to stop at the bottom of the array.
   */
-  public static void downString( char[][] board, int row, int col, String word )
-  {
-    /* YOUR AWESOME CODE HERE */
-  }
+  public static void downString(char[][] board, int row, int col, String word)
+    {
+        int i = 0;
+        while (i < word.length() && row < board.length)
+        {
+            board[row][col] = word.charAt(i);
+            row++;
+            i++;
+        }
+    }
 
 
   public static void main( String[] args )
@@ -267,6 +273,7 @@ public class Array2DPractice
     char[][] board = buildBoard(5,5,'O');
     board[1][1] = 'Z';
     board[3][4] = 'Z';
+    board[2][4] = 'Z';
     System.out.println("\nBelow is the board for explode char");
     printBoard(board); //this is the first 5
 
