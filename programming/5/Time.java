@@ -1,11 +1,11 @@
-import java.io.*;
+  import java.io.*;
 import java.util.*;
 
 
 /**
  * Time class by Team LucidThinkeren
  * Aasine Cassara
- * collaborators: Alana,Kiana, 
+ * collaborators: Alana,Kiana, Jerusha
  */
 
 /**
@@ -40,16 +40,18 @@ public class Time {
     // Instance Variable(s)
     // You can change this if you want to use the alternate
     // implementation of just storing the overall seconds.
-    
-    int hours;
-    int minutes;
-    int seconds;
+
+  //make it private so only the class can access it
+    private int hours;
+    private int minutes;
+    private int seconds;
 
     // Constructors
-    public Time(int hours, int minutes, int seconds){
-	this.hours = 0;
-	this.minutes = 0;
-	this.seconds = 0;
+    public Time(){
+      
+      this.hours = 0;
+	    this.minutes = 0;
+	    this.seconds = 0;
 	
     }
 
@@ -58,10 +60,14 @@ public class Time {
        - hrs, mins, secs - the time you want to create the class as
 
        Initialize this instance to represent hrs:mins:secs as the time.
-       
+       //time is our object "this". refers to the instance variable in the object
      */
     public Time(int hrs, int mins, int secs){
-
+      hours = hrs;
+      minutes = mins;
+      seconds = secs;
+      
+      
 	// your code here
 	
     }
@@ -73,7 +79,7 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
-	return("This should be changed to return the time in a nice form");
+	    return hours + ":" + minutes + ":" + seconds;
     }
 
 
@@ -88,7 +94,10 @@ public class Time {
     public void set(int hrs, int mins, int secs){
 	// add the code to add the time represented by other
 	// to this instance.
-
+      hours = hrs;
+      minutes = mins;
+      seconds = secs;
+      
     }
 
     
@@ -103,6 +112,10 @@ public class Time {
     public void add(Time other){
 	// add the code to add the time represented by other
 	// to this instance.
+      this.hours += other.hours;
+      this.minutes += other.minutes;
+      this.seconds += other.seconds;
+      
 
     }
 
@@ -137,6 +150,7 @@ public class Time {
     */
     public int compareTo(Time other){
 	// your code here)
+      
 
 	return 0; // change this
     }
