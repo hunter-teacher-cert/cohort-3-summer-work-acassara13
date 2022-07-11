@@ -37,7 +37,7 @@ public class SuperArray
   public SuperArray( int size )
   {
   this.data= new int[size];//init underlying/inner storage of specified capacity
-    this.numberElements = size;
+    this.numberElements = 0;
     
     /* YOUR SIMPLE+SMART CODE HERE */
 
@@ -50,7 +50,7 @@ public class SuperArray
   public SuperArray()
   {
    this.data= new int [10];
-    this.numberElements=10;
+    this.numberElements=0;
     //init underlying/inner storage of capacity 10
         /* YOUR SIMPLE+SMART CODE HERE */
 

@@ -5,7 +5,7 @@ public class SuperArrayDriver
 {
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
     System.out.println("Testing default constructor.");
     SuperArray sa = new SuperArray();
     System.out.println("Testing empty print:");
@@ -16,7 +16,7 @@ public class SuperArrayDriver
     // YOUR HOMEGROWN/HOUSEMADE/ROLL-YOUR-OWN TEST METHODS HERE...
     // -----------------------------------------------------------
     //precondition: newly-instantiated SuperArray of default capacity
-    System.out.println("Testing overfill (calling grow() in add)");
+   /* System.out.println("Testing overfill (calling grow() in add)");
     for (int i=0; i<15; i++) {
       sa.add(i);
     }//for i
