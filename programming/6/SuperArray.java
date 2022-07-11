@@ -60,13 +60,8 @@ public class SuperArray
 
 
   // ~~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~
-  public void add( int value )
+  public void add( int value ) //int value tells us how many times to increase the length 
   {
-    if (numberElements == this.data.length)
-			//resize(this.data.length + 10);
-
-		data[numberElements] = value;
-		numberElements++;
     // test to see if we need to grow, then grow
     /**
        IMPORTANT:
@@ -76,13 +71,26 @@ public class SuperArray
        then only write this section once the rest is tested and working.
     */
     /* YOUR SIMPLE+SMART CODE HERE */
-
+    //int[]temp = new int[data.length+1]; //+1 so that we start above the default value
+  if(data.length==numberElements) { 
+      grow();
     // add item
     /* YOUR SIMPLE+SMART CODE HERE */
+    //if(data.length <= numberElements {//if data length is 10 and elements is 10 then there is no room for an additional element
+      //for(int =0; i<data.length; i++) {///so we have to loop through the original array and copy all ements to the temp array (which now is size 11)
+        //temp[i] = data[i];// copying
+      }
+
+      //data = temp; //resetting the original array to the new array temp
+      
+    
+
+    data[numberElements] = value; 
 
 
     // increment numberElements
     /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements++;
 
   }//end add()
 
@@ -140,12 +148,10 @@ public class SuperArray
 
   public void remove(int index)
   {
-    if (index >= numberElements || index < 0) {
-			//return -1;
-		} else {
-			index = data[index];
-			for (int i = index; i < numberElements-1; i++)
-				data[i] = data[i+1];
+    for(int i=index; i<numberElements-1;i++){
+      data[i]=data[i+1];
+    }
+    
 			numberElements--;
 			
 		}
@@ -154,22 +160,24 @@ public class SuperArray
 
     // subtract fom numElements;
     /* YOUR SIMPLE+SMART CODE HERE */
-  }
+  
 
 
   public void add(int index, int value)
   {
-    if (index >= value) {
-			add(10);
-		} else if (index >= 0) {
-			if (value == data.length)
-				//resize(value + 10);
-			for (int i = value; i > index; i--)
-				data[i] = data[i-1];
+    if (data.length==numberElements) {
+			grow();
+    }
 
-			data[index] = 0;
-			numberElements++;
-		}
+    for (int i=numberElements-1; i>=index; i--){
+      
+    
+			data[i+1] = data[i];
+    }
+			
+    data[index]=value;
+    numberElements++;
+		}//end add2
     // see if there's enough room
     /* YOUR SIMPLE+SMART CODE HERE */
 
@@ -181,7 +189,7 @@ public class SuperArray
 
     // increment numElements
     /* YOUR SIMPLE+SMART CODE HERE */
-  }
+  
 
 
   private void grow()
@@ -189,13 +197,16 @@ public class SuperArray
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
     /* YOUR SIMPLE+SMART CODE HERE */
-
+    int[]data1=new int[data.length + 1];
     // copy over all the elements from the old array to the new one
     /* YOUR SIMPLE+SMART CODE HERE */
-
+for (int i=0; i<data.length; i++){
+  data1[i]=data[i];
+}
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     /* YOUR SIMPLE+SMART CODE HERE */
+    data=data1;
   }//end grow()
 
 }//end class

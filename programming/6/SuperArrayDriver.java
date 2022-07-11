@@ -16,7 +16,7 @@ public class SuperArrayDriver
     // YOUR HOMEGROWN/HOUSEMADE/ROLL-YOUR-OWN TEST METHODS HERE...
     // -----------------------------------------------------------
     //precondition: newly-instantiated SuperArray of default capacity
-   /* System.out.println("Testing overfill (calling grow() in add)");
+   System.out.println("Testing overfill (calling grow() in add)");
     for (int i=0; i<15; i++) {
       sa.add(i);
     }//for i
@@ -36,7 +36,7 @@ public class SuperArrayDriver
     System.out.println(sa);
     sa.remove(15);
     System.out.println(sa);
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
   }//main
 
