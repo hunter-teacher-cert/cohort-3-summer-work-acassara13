@@ -1,0 +1,34 @@
+
+// multiplies all items in the array a
+
+public static int banana(int[] a) {
+    int kiwi = 1;//stores value
+    int i = 0; //counter
+    while (i < a.length) {//traverses through array
+        kiwi = kiwi * a[i];//multiplies each array item by kiwi
+        i++;/increase counter by 1
+    }
+    return kiwi;//return the int
+}
+
+//traverses through the array a looking for grape
+
+public static int grapefruit(int[] a, int grape) {
+    for (int i = 0; i < a.length; i++) {
+        if (a[i] == grape) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// traverses through array a searching for apple
+public static int pineapple(int[] a, int apple) {
+    int pear = 0;// stores the num of apples
+    for (int pine: a) {
+        if (pine == apple) {
+            pear++;
+        }
+    }
+    return pear;
+}

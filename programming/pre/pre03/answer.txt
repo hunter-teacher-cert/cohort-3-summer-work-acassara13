@@ -1,0 +1,31 @@
+What is the output of the following program? 
+No, I wug.
+You wugga wug.
+I wug
+
+What happens if you invoke baffle(); at the end of the ping method? 
+ping prints out "." and then returns a new line 
+.
+wug.
+
+public static void zoop() {
+    baffle(); Executes the baffle method and prints out wug.
+    System.out.print("You wugga ");
+    baffle();
+}
+
+public static void main(String[] args) {
+    System.out.print("No, I ");
+    zoop();
+    System.out.print("I ");
+    baffle();
+}
+
+public static void baffle() {
+    System.out.print("wug");
+    ping();
+}
+
+public static void ping() {
+    System.out.println(".");
+}
