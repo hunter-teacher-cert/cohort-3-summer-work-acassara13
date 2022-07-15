@@ -56,6 +56,7 @@ public class Driver{
       walker=walker.getNext(); 
     }
 	System.out.println(walker.getData());
+      System.out.print(walker);
     }
 
 }
